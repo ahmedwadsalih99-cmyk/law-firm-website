@@ -357,7 +357,6 @@ padding: var(--spacing-md) var(--spacing-xl);
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 80;
 }
 
 .hero::before {
@@ -398,7 +397,7 @@ padding: var(--spacing-md) var(--spacing-xl);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-3xl);
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: var(--spacing-3xl);
 
 }
@@ -1625,15 +1624,47 @@ padding: var(--spacing-md) var(--spacing-xl);
         padding: 100px var(--spacing-xl) var(--spacing-xl);
         transition: right var(--transition-base);
         box-shadow: var(--shadow-xl);
+        z-index: 1000;
     }
-    
-    .nav-menu.active {
+       .nav-menu.active {
         right: 0;
     }
     
     .hamburger {
         display: flex;
+        z-index: 1000;
     }
+    .navbar {
+        padding: 8px 0;
+        height: auto;
+    }
+    
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .logo-text h2 {
+        font-size: 16px;
+    }
+    
+    .logo-text span {
+        font-size: 10px;
+    }
+    
+    .hero {
+        padding-top: 60px;
+    }
+    
+    .hero .container {
+        padding-top: 40px;
+    }
+    
+    .page-header {
+        padding-top: 100px;
+    }
+
     
     .about-grid,
     .about-detail-grid {
@@ -1681,6 +1712,62 @@ padding: var(--spacing-md) var(--spacing-xl);
 
 /* أجهزة موبايل */
 @media (max-width: 768px) {
+   .navbar {
+        padding: 5px 0;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .logo-text h2 {
+        font-size: 14px;
+    }
+    
+    .logo-text span {
+        font-size: 9px;
+    }
+    
+    .hero {
+        padding-top: 50px;
+    }
+    
+    .hero .container {
+        padding-top: 20px;
+    }
+    
+    .hero-title {
+        font-size: 24px !important;
+    }
+    
+    .hero-description {
+        font-size: 14px !important;
+    }
+    
+    .page-header {
+        padding-top: 80px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .stat-number,
+    .stat-plus {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
     :root {
         --text-6xl: 2.5rem;
         --text-5xl: 2rem;
